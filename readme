@@ -1,0 +1,21 @@
+
+This README provides an overview of the Python code used to clean and analyze shark attack data. The dataset is loaded from an Excel file using the pandas library, and various functions are applied to clean and preprocess the data.
+## Code Structure
+### 1. Loading and Initial Overview
+The code begins by loading the shark attack dataset from an Excel file using the pandas library. The `data_frame_overview` function provides an initial overview of the dataset, displaying column names, dimensions, and data types.
+### 2. Column Name Formatting
+The `format_column_names` function is employed to format column names. It converts column names to lowercase, strips leading and trailing whitespaces, and replaces spaces with underscores. Additionally, it allows for custom column name mapping.
+### 3. Handling Duplicates
+Functions such as `dup_check` and `drop_dup_reset` check for and handle duplicate rows in the dataset.
+### 4. Handling Null Values
+The `null_check` function examines and prints the count of null values in each row and column. The `dropna_rows_cols` function removes rows and columns based on user-defined thresholds for null values.
+### 5. Cleaning Specific Columns
+Several functions are defined to clean specific columns, including `clean_sex_column`, `clean_countries_column`, `clean_fatality_column`, and `clean_type_column`. These functions standardize values, correct typos, and handle missing or invalid entries.
+### 6. Species Column Cleaning
+The `replace_species` function is designed to clean the ‘species’ column by replacing similar names with standardized names. It utilizes a dictionary for mapping replacements and employs string matching techniques.
+### 7. Data Export
+The cleaned dataset is exported to a CSV file named ‘shark_attack_modified.csv’ using the pandas `to_csv` function. The file is then downloaded using the Google Colab `files.download` function.
+## Data Analysis
+The code also includes exploratory data analysis (EDA) steps, such as examining value counts for each column, descriptive statistics for numeric columns, and cleaning activities column values.
+## Conclusion
+This code provides a comprehensive pipeline for loading, cleaning, and analyzing shark attack data. The functions address various data quality issues, ensuring a more accurate and consistent dataset for further analysis.
