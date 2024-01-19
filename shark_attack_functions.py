@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-#Defining functions
 
 def data_frame_overview(data_frame):
     print(f'Column names: \n {data_frame.columns}\n')
